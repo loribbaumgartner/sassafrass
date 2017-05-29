@@ -1,0 +1,15 @@
+$plum: rgba(31, 32, 65, 1);
+$purple: rgba(75, 63, 114, 1);
+$yellow: rgba(255, 200, 87, 1);
+$teal: rgba(17, 157, 164, 1);
+$blue: rgba(25, 100, 126, 1);
+
+$baseFont: normal 24px/1.5 'Nunito', sans-serif;
+$base-font-size: 40px;
+
+body {
+  background-color: $teal;
+  font: $baseFont;
+  font-size: $base-font-size;
+  color: $blue;
+}
