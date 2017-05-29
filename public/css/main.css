@@ -1,5 +1,15 @@
-body {
+html {
+  cursor: pointer;
+  margin: 0px;
   background-color: #119da4;
   font: normal 24px/1.5 "Nunito", sans-serif;
-  font-size: 40px;
-  color: #19647e; }
+  font-size: 50px;
+  color: #19647e;
+  height: 100%;
+  width: 100%; }
+
+.clock-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25%; }

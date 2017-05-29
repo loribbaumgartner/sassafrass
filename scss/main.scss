@@ -5,11 +5,22 @@ $teal: rgba(17, 157, 164, 1);
 $blue: rgba(25, 100, 126, 1);
 
 $baseFont: normal 24px/1.5 'Nunito', sans-serif;
-$base-font-size: 40px;
+$base-font-size: 50px;
 
-body {
+html {
+  cursor: pointer;
+  margin: 0px;
   background-color: $teal;
   font: $baseFont;
   font-size: $base-font-size;
   color: $blue;
+  height: 100%;
+  width: 100%;
+}
+
+.clock-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25%;
 }
