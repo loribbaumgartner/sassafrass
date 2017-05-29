@@ -1,0 +1,19 @@
+{
+  "name": "sassafrass",
+  "version": "1.0.0",
+  "description": "JS Clock Using Sass",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/loribbaumgartner/sassafrass.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/loribbaumgartner/sassafrass/issues"
+  },
+  "homepage": "https://github.com/loribbaumgartner/sassafrass#readme"
+}
