@@ -8,7 +8,8 @@ $(function() {
 
   $('.current-time').append(time);
 
-  $("html").click(function(time) {
-    $('.current-time').append(time);
+  $("html").click(function() {
+    newTime = new Date().toLocaleTimeString();
+    $('.current-time').text(newTime);
   });
 });
