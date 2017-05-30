@@ -1,12 +1,11 @@
-html {
+html, body {
   cursor: pointer;
   margin: 0px;
   background-color: #119da4;
-  font: normal 24px/1.5 "Nunito", sans-serif;
+  font: 600 24px/1.5 "Nunito", sans-serif;
   font-size: 50px;
   color: #19647e;
-  height: 100%;
-  width: 100%; }
+  height: 100%; }
 
 .container {
   position: fixed;
@@ -21,6 +20,13 @@ html {
   justify-content: center;
   margin-top: 25%; }
 
+.water {
+  background: #19647e;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  margin-top: -20px; }
+
 .drop {
   position: absolute;
   width: 0px;
@@ -32,25 +38,10 @@ html {
   left: 0;
   background-color: #19647e;
   border-radius: 50% 1px 50% 50%;
-  -webkit-transform: rotate(-45deg);
-  -webkit-animation: drip 0.4s linear; }
+  transform: rotate(-45deg);
+  animation: drip 0.4s linear; }
 
-.drop:nth-child(2) {
-  border-radius: 50%;
-  -webkit-transform: rotate(0deg);
-  -webkit-animation: bounce 0.55s 0.8s linear; }
-
-.drop:nth-child(4) {
-  border-radius: 50%;
-  -webkit-transform: rotate(45deg);
-  -webkit-animation: splash-right 0.55s 1.2s linear; }
-
-.drop:nth-child(5) {
-  border-radius: 50%;
-  -webkit-transform: rotate(45deg);
-  -webkit-animation: splash-left 0.55s 1.2s linear; }
-
-@-webkit-keyframes drip {
+@keyframes drip {
   0% {
     width: 0px;
     height: 0px;
@@ -63,55 +54,3 @@ html {
     width: 20px;
     height: 20px;
     top: 10px; } }
-
-@-webkit-keyframes bounce {
-  0% {
-    width: 0px;
-    height: 0px;
-    top: 10px; }
-  40% {
-    width: 10px;
-    height: 10px;
-    top: -100px; }
-  100% {
-    width: 10px;
-    height: 10px;
-    top: 0px; } }
-
-@-webkit-keyframes splash-right {
-  0% {
-    opacity: 1;
-    width: 0px;
-    height: 0px;
-    top: 10px; }
-  60% {
-    opacity: 1;
-    width: 6px;
-    height: 6px;
-    top: -80px;
-    left: 50px; }
-  100% {
-    opacity: 0;
-    width: 6px;
-    height: 6px;
-    top: -70px;
-    left: 80px; } }
-
-@-webkit-keyframes splash-left {
-  0% {
-    opacity: 1;
-    width: 0px;
-    height: 0px;
-    top: 10px; }
-  60% {
-    opacity: 1;
-    width: 6px;
-    height: 6px;
-    top: -60px;
-    left: -50px; }
-  100% {
-    opacity: 0;
-    width: 6px;
-    height: 6px;
-    top: -40px;
-    left: -80px; } }

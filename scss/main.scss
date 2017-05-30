@@ -4,10 +4,10 @@ $yellow: rgba(255, 200, 87, 1);
 $teal: rgba(17, 157, 164, 1);
 $blue: rgba(25, 100, 126, 1);
 
-$baseFont: normal 24px/1.5 'Nunito', sans-serif;
+$baseFont: 600 24px/1.5 'Nunito', sans-serif;
 $base-font-size: 50px;
 
-html {
+html, body {
   cursor: pointer;
   margin: 0px;
   background-color: $teal;
@@ -15,7 +15,6 @@ html {
   font-size: $base-font-size;
   color: $blue;
   height: 100%;
-  width: 100%;
 }
 
 .container {
@@ -33,6 +32,14 @@ html {
   margin-top: 25%;
 }
 
+.water {
+  background: $blue;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  margin-top: -20px;
+}
+
 .drop {
   position: absolute;
   width: 0px;
@@ -41,26 +48,11 @@ html {
   top:0px; bottom:0; right:0; left:0;
   background-color: $blue;
   border-radius: 50% 1px 50% 50%;
-  -webkit-transform: rotate(-45deg);
-  -webkit-animation: drip 0.4s linear;
-}
-.drop:nth-child(2) {
-  border-radius: 50%;
-  -webkit-transform: rotate(0deg);
-  -webkit-animation: bounce 0.55s 0.8s linear;
-}
-.drop:nth-child(4) {
-  border-radius: 50%;
-  -webkit-transform: rotate(45deg);
-  -webkit-animation: splash-right 0.55s 1.2s linear;
-}
-.drop:nth-child(5) {
-  border-radius: 50%;
-  -webkit-transform: rotate(45deg);
-  -webkit-animation: splash-left 0.55s 1.2s linear;
+  transform: rotate(-45deg);
+  animation: drip 0.4s linear;
 }
 
-@-webkit-keyframes drip {
+@keyframes drip {
  0% {
     width: 0px;
     height: 0px;
@@ -75,67 +67,5 @@ html {
     width: 20px;
     height: 20px;
     top: 10px;
-  }
-}
-
-@-webkit-keyframes bounce {
- 0% {
-    width: 0px;
-    height: 0px;
-    top: 10px;
-  }
-  40% {
-    width: 10px;
-    height: 10px;
-    top: -100px;
-  }
-  100% {
-    width: 10px;
-    height: 10px;
-    top: 0px;
-  }
-}
-@-webkit-keyframes splash-right {
- 0% {
-   opacity: 1;
-    width: 0px;
-    height: 0px;
-    top: 10px;
-  }
-  60% {
-    opacity: 1;
-    width: 6px;
-    height: 6px;
-    top: -80px;
-    left: 50px;
-  }
-  100% {
-    opacity: 0;
-    width: 6px;
-    height: 6px;
-    top: -70px;
-    left: 80px;
-  }
-}
-@-webkit-keyframes splash-left {
- 0% {
-   opacity: 1;
-    width: 0px;
-    height: 0px;
-    top: 10px;
-  }
-  60% {
-    opacity: 1;
-    width: 6px;
-    height: 6px;
-    top: -60px;
-    left: -50px;
-  }
-  100% {
-    opacity: 0;
-    width: 6px;
-    height: 6px;
-    top: -40px;
-    left: -80px;
   }
 }
